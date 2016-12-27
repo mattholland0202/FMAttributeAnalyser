@@ -6,56 +6,55 @@ namespace FMAA.Data.Entities
     {
         public virtual byte[] Version { get; set; }
         public virtual int PlayerPositionsID { get; set; }
-        public virtual Player Player { get; set; }
 
-        [FriendlyName(FriendlyName = "Goalkeeper", ShortName = "GK")]
+        [FriendlyName("Goalkeeper", "GK")]
         public virtual PlayerPositionLevel Goalkeeper { get; set; }
 
-        [FriendlyName(FriendlyName = "Sweeper", ShortName = "SW")]
+        [FriendlyName("Sweeper", "SW")]
         public virtual PlayerPositionLevel Sweeper { get; set; }
 
-        [FriendlyName(FriendlyName = "Right Back", ShortName = "RB")]
+        [FriendlyName("Right Back", "RB")]
         public virtual PlayerPositionLevel RightBack { get; set; }
 
-        [FriendlyName(FriendlyName = "Centre Back", ShortName = "CB")]
+        [FriendlyName("Centre Back", "CB")]
         public virtual PlayerPositionLevel CentreBack { get; set; }
 
-        [FriendlyName(FriendlyName = "Left Back", ShortName = "LB")]
+        [FriendlyName("Left Back", "LB")]
         public virtual PlayerPositionLevel LeftBack { get; set; }
 
-        [FriendlyName(FriendlyName = "Right Wing Back", ShortName = "RWB")]
+        [FriendlyName("Right Wing Back", "RWB")]
         public virtual PlayerPositionLevel RightWingBack { get; set; }
 
-        [FriendlyName(FriendlyName = "Defensive Midfield", ShortName = "DM")]
+        [FriendlyName("Defensive Midfield", "DM")]
         public virtual PlayerPositionLevel DefensiveMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Left Wing Back", ShortName = "LWB")]
+        [FriendlyName("Left Wing Back", "LWB")]
         public virtual PlayerPositionLevel LeftWingBack { get; set; }
 
-        [FriendlyName(FriendlyName = "Right Midfield", ShortName = "RM")]
+        [FriendlyName("Right Midfield", "RM")]
         public virtual PlayerPositionLevel RightMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Centre Midfield", ShortName = "CM")]
+        [FriendlyName("Centre Midfield", "CM")]
         public virtual PlayerPositionLevel CentreMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Left Midfield", ShortName = "LM")]
+        [FriendlyName("Left Midfield", "LM")]
         public virtual PlayerPositionLevel LeftMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Right Attacking Midfield", ShortName = "AMR")]
+        [FriendlyName("Right Attacking Midfield", "AMR")]
         public virtual PlayerPositionLevel RightAttackingMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Centre Attacking Midfield", ShortName = "AMC")]
+        [FriendlyName("Centre Attacking Midfield", "AMC")]
         public virtual PlayerPositionLevel CentreAttackingMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Left Attacking Midfield", ShortName = "AML")]
+        [FriendlyName("Left Attacking Midfield", "AML")]
         public virtual PlayerPositionLevel LeftAttackingMidfield { get; set; }
 
-        [FriendlyName(FriendlyName = "Striker", ShortName = "ST")]
+        [FriendlyName("Striker", "ST")]
         public virtual PlayerPositionLevel Striker { get; set; }
     }
 
     /// <summary>
-    /// 
+    /// Enum to store the levels of competence that a Player can have in a position
     /// </summary>
     public enum PlayerPositionLevel
     {

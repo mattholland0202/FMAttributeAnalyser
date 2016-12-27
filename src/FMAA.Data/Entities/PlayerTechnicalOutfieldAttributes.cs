@@ -1,6 +1,8 @@
-﻿namespace FMAA.Data.Entities
+﻿using FMAA.Data.Utils;
+
+namespace FMAA.Data.Entities
 {
-    public class PlayerTechnicalOutfieldAttributes : IVersionedEntity
+    public class PlayerTechnicalOutfieldAttributes : IVersionedEntity, IPlayerTechnicalAttributes
     {
         public virtual byte[] Version { get; set; }
         public virtual int PlayerTechnicalOutfieldAttributesID { get; set; }

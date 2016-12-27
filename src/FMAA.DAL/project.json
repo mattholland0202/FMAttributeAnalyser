@@ -5,6 +5,7 @@
     "FluentNHibernate": "2.0.3",
     "FMAA.DAL.Interfaces": "1.0.0-*",
     "FMAA.Data": "1.0.0-*",
+    "FMAA.Web.Api.Models": "1.0.0-*",
     "NHibernate": "4.1.0.4000"
   },
 

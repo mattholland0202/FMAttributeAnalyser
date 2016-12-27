@@ -1,13 +1,20 @@
-﻿{
+{
   "version": "1.0.0-*",
 
   "dependencies": {
-    "NUnit": "3.5.0"
+    "dotnet-test-nunit": "3.4.0-beta-3",
+    "FMAA.BLL": "1.0.0-*",
+    "FMAA.BLL.Interfaces": "1.0.0-*",
+    "FMAA.DAL": "1.0.0-*",
+    "FMAA.DAL.Interfaces": "1.0.0-*",
+    "FMAA.Web.Api.Models": "1.0.0-*",
+    "Moq": "4.5.29",
+    "NUnit": "3.5.0",
   },
 
   "frameworks": {
     "net461": {}
   },
 
-  "testRunner": "NUnit"
+  "testRunner": "nunit"
 }

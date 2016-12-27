@@ -1,6 +1,8 @@
-﻿namespace FMAA.Data.Entities
+﻿using FMAA.Data.Utils;
+
+namespace FMAA.Data.Entities
 {
-    public class PlayerTechnicalGoalkeeperAttributes : IVersionedEntity
+    public class PlayerTechnicalGoalkeeperAttributes : IVersionedEntity, IPlayerTechnicalAttributes
     {
         public virtual byte[] Version { get; set; }
         public virtual int PlayerTechnicalGoalkeeperAttributesID { get; set; }
