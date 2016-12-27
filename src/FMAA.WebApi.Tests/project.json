@@ -1,0 +1,13 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NUnit": "3.5.0"
+  },
+
+  "frameworks": {
+    "net461": {}
+  },
+
+  "testRunner": "NUnit"
+}
