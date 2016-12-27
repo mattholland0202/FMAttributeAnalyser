@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "FluentNHibernate": "2.0.3",
+    "FMAA.Data": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net461": {}
+  }
+}

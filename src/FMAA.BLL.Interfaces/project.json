@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "FMAA.DAL.Interfaces": "1.0.0-*",
+    "FMAA.Web.Api.Models": "1.0.0-*"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  }
+}

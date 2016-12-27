@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FMAA.Data")]
+[assembly: AssemblyProduct("FMAA.DAL")]
 [assembly: AssemblyTrademark("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -16,4 +16,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d06d7697-d0a0-4866-b607-e45cd63a3346")]
+[assembly: Guid("7f230ffc-ec05-417f-9b8d-a1dbe7bf28a3")]

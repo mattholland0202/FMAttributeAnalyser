@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "AutoMapper": "5.2.0",
+    "FluentNHibernate": "2.0.3",
+    "FMAA.BLL.Interfaces": "1.0.0-*",
+    "FMAA.DAL": "1.0.0-*",
+    "FMAA.DAL.Interfaces": "1.0.0-*",
+    "FMAA.Data.Mapping": "1.0.0-*",
+    "NHibernate": "4.1.0.4000"
+  },
+
+  "frameworks": {
+    "net461": {
+    }
+  }
+}
