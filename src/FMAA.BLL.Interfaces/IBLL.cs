@@ -9,8 +9,6 @@ namespace FMAA.BLL.Interfaces
 {
     public interface IBLL
     {
-        IUnitOfWork UnitOfWork { get; set; }
-
         IPlayers Players { get; set; }
     }
 }
