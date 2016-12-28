@@ -301,3 +301,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+*.VC.opendb
+*.VC.db 
+
+*.jfm
