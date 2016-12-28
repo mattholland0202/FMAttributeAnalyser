@@ -8,13 +8,11 @@ namespace FMAA.Data.Utils
     [AttributeUsage(AttributeTargets.Property)]
     public class FriendlyNameAttribute : Attribute
     {
-        public FriendlyNameAttribute(string friendlyName, string shortName)
+        public FriendlyNameAttribute(string friendlyName)
         {
             FriendlyName = friendlyName;
-            ShortName    = shortName;
         }
 
         public string FriendlyName { get; set; }
-        public string ShortName { get; set; }
     }
 }
