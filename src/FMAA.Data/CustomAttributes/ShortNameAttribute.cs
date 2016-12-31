@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace FMAA.Data.Utils
+namespace FMAA.Data.CustomAttributes
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class ShortNameAttribute : Attribute

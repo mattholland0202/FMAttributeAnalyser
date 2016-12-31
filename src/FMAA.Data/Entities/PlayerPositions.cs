@@ -1,4 +1,4 @@
-﻿using FMAA.Data.Utils;
+﻿using FMAA.Data.CustomAttributes;
 
 namespace FMAA.Data.Entities
 {
@@ -6,6 +6,7 @@ namespace FMAA.Data.Entities
     {
         public virtual byte[] Version { get; set; }
         public virtual int PlayerPositionsID { get; set; }
+        public virtual Player Player { get; set; }
 
         [FriendlyName("Goalkeeper")]
         [ShortName("GK")]

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FMAA.Data.Utils
+namespace FMAA.Data.CustomAttributes
 {
     /// <summary>
     /// Attribute to allow a friendly name (e.g. including spaces) and a shortened name to be attached to a property
