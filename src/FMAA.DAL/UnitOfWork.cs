@@ -1,10 +1,16 @@
-﻿using FluentNHibernate.Cfg;
+﻿using FluentNHibernate;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using FMAA.DAL.Interfaces;
+using FMAA.Data.Mapping;
+using Microsoft.Extensions.Configuration;
 using NHibernate;
+using NHibernate.Cfg;
 using NHibernate.Context;
+using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,26 +19,44 @@ namespace FMAA.DAL
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ISession session;
+        private ISession session;
+        private IConfigurationRoot configuration { get; set; }
 
         public UnitOfWork()
         {
-             //var cfg = Fluently.Configure().
-            //   Database(SQLiteConfiguration.Standard.ShowSql().UsingFile("Foo.db")).
-            //   Mappings(m => m.FluentMappings.AddFromAssemblyOf<PlayerMap>());
-            //var _sessionFactory = cfg.BuildSessionFactory();
-            //BuildSchema(cfg);
-            //this.session = _sessionFactory.OpenSession();
+            //ConfigurationSetup();
+
+            NHibernateSetup();
 
             this.PlayerRepository = new PlayerRepository(session);
         }
 
-        //private static void BuildSchema(FluentConfiguration configuration)
-        //{
-        //    var sessionSource = new SessionSource(configuration);
-        //    var session = sessionSource.CreateSession();
-        //    sessionSource.BuildSchema(session);            
-        //}
+        private void ConfigurationSetup()
+        {
+            var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
+            configuration = builder.Build();
+        }
+
+        private void NHibernateSetup()
+        {
+            var sessionFactory = Fluently.Configure()
+                                    .Database(SQLiteConfiguration.Standard.UsingFile("FMAA.db"))
+                                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<PlayerMap>())
+                                    .ExposeConfiguration(BuildSchema)
+                                    .BuildSessionFactory();
+
+            session = sessionFactory.OpenSession();
+        }
+
+        private static void BuildSchema(Configuration config)
+        {
+            if (File.Exists("FMAA.db"))
+            {
+                File.Delete("FMAA.db");
+            }
+
+            new SchemaExport(config).Create(false, true);
+        }
 
         public IPlayerRepository PlayerRepository { get; set; }
 

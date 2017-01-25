@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": [ "sqlite3.exe", "create.sql" ]
+  },
+
+  "dependencies": {
+    "System.Data.SQLite": "1.0.104",
+    "System.Data.SQLite.Core": "1.0.104"
+  },
+
+  "frameworks": {
+    "net461": {
+      "frameworkAssemblies": {
+        "System.Data": "4.0.0.0"
+      }
+    }
+  }
+}

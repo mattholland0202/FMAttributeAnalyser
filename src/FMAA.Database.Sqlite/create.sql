@@ -1,0 +1,6 @@
+CREATE TABLE Players
+(
+PlayerID INT,
+Name VARCHAR(200),
+DateOfBith DATETIME
+);

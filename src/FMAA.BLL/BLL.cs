@@ -6,7 +6,7 @@ namespace FMAA.BLL
 {
     public class BLL : IBLL
     {
-        private IUnitOfWork unitOfWork;
+        internal IUnitOfWork unitOfWork { get; private set; }
 
         /// <summary>
         /// Constructor which creates a new <see cref="UnitOfWork"/> 
@@ -31,7 +31,7 @@ namespace FMAA.BLL
 
         private void Setup()
         {
-            this.Players = new Players(unitOfWork);
+            this.Players = new Players(this);
         }
 
         public IPlayers Players { get; set; }

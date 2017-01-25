@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": [ "sqlite3.dll", "SQLite.Interop.dll" ]
+  },
+
+  "dependencies": {
+    "FMAA.DAL": "1.0.0-*",
+    "System.Data.SQLite": "1.0.104",
+    "System.Data.SQLite.Core": "1.0.104"
+  },
+
+  "frameworks": {
+    "net461": {}
+  },
+}

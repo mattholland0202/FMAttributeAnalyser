@@ -1,26 +1,19 @@
 ﻿using FMAA.BLL.Interfaces;
-using FMAA.DAL.Interfaces;
 using FMAA.Web.Api.Models.Return;
-using NHibernate;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace FMAA.BLL
 {
-    public class Players : IPlayers
+    public class Players : AbstractBase, IPlayers
     {
-        private readonly IUnitOfWork unitOfWork;
-
-
-        public Players(IUnitOfWork unitOfWork)
+        public Players(BLL bll) : base(bll)
         {
-            this.unitOfWork = unitOfWork;
         }
 
         public IEnumerable<PlayerModel> GetAll()
         {
-            var players = unitOfWork.PlayerRepository.GetAll();
+            var players = UnitOfWork.PlayerRepository.GetAll();
             return players.Select(q => new PlayerModel() { ID = q.PlayerID, Name = q.Name });
         }
     }

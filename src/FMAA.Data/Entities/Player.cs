@@ -16,12 +16,12 @@ namespace FMAA.Data.Entities
         public virtual bool IsGoalkeeper { get; set; }
 
         // Attributes
-        public IPlayerTechnicalAttributes TechnicalAttributes { get; set; }
-        public PlayerMentalAttributes MentalAttributes { get; set; }
-        public PlayerPhysicalAttributes PhysicalAttributes { get; set; }
+        public virtual IPlayerTechnicalAttributes TechnicalAttributes { get; set; }
+        public virtual PlayerMentalAttributes MentalAttributes { get; set; }
+        public virtual PlayerPhysicalAttributes PhysicalAttributes { get; set; }
 
         // Common Polygon Values
-        public double Physical
+        public virtual double Physical
         {
             get
             {
@@ -34,7 +34,7 @@ namespace FMAA.Data.Entities
             }
         }
         
-        public double Speed
+        public virtual double Speed
         {
             get
             {
@@ -45,7 +45,7 @@ namespace FMAA.Data.Entities
             }
         }
         
-        public double Mental
+        public virtual double Mental
         {
             get
             {
@@ -60,7 +60,7 @@ namespace FMAA.Data.Entities
             }
         }
         
-        public double Aerial
+        public virtual double Aerial
         {
             get
             {
@@ -89,7 +89,7 @@ namespace FMAA.Data.Entities
         }
 
         // Outfield Polygon Values
-        public double Defending
+        public virtual double Defending
         {
             get
             {
@@ -104,7 +104,7 @@ namespace FMAA.Data.Entities
         }
         
         
-        public double Creativity
+        public virtual double Creativity
         {
             get
             {
@@ -119,7 +119,7 @@ namespace FMAA.Data.Entities
             }
         }
 
-        public double Attacking
+        public virtual double Attacking
         {
             get
             {
@@ -133,7 +133,7 @@ namespace FMAA.Data.Entities
             }
         }
 
-        public double Technical
+        public virtual double Technical
         {
             get
             {
@@ -148,7 +148,7 @@ namespace FMAA.Data.Entities
         }
 
         // Goalkeeper Polygon Values
-        public double ShotStopping
+        public virtual double ShotStopping
         {
             get
             {
@@ -162,7 +162,7 @@ namespace FMAA.Data.Entities
             }
         }
 
-        public double Communication
+        public virtual double Communication
         {
             get
             {
@@ -176,7 +176,7 @@ namespace FMAA.Data.Entities
             }
         }
 
-        public double Eccentricity
+        public virtual double Eccentricity
         {
             get
             {
@@ -186,7 +186,7 @@ namespace FMAA.Data.Entities
             }
         }
 
-        public double Distribution
+        public virtual double Distribution
         {
             get
             {

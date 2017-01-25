@@ -18,8 +18,8 @@ namespace FMAA.Data.Mapping
             HasOne(x => x.PhysicalAttributes).Cascade.All();
 
             // TODO: How to do Technical Attributes -> Goalkeeper / Outfield?
-            References<PlayerTechnicalOutfieldAttributes>(x => x.TechnicalAttributes).Nullable().Cascade.All();
-            References<PlayerTechnicalGoalkeeperAttributes>(x => x.TechnicalAttributes).Nullable().Cascade.All();
+            //References<PlayerTechnicalOutfieldAttributes>(x => x.TechnicalAttributes).Nullable().Cascade.All();
+            //References<PlayerTechnicalGoalkeeperAttributes>(x => x.TechnicalAttributes).Nullable().Cascade.All();
         }
     }
 }
