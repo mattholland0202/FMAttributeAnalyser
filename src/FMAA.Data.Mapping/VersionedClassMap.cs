@@ -11,6 +11,7 @@ namespace FMAA.Data.Mapping
         protected VersionedClassMap()
         {
             Version(x => x.Version)
+                .Nullable()
                 .Column("ts")
                 .CustomSqlType("Rowversion")
                 .Generated.Always()

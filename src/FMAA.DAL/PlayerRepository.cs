@@ -20,14 +20,25 @@ namespace FMAA.DAL
 
         public void Add(Player player)
         {
-            throw new NotImplementedException();
+            using (ITransaction tr = session.BeginTransaction())
+            {
+                try
+                {
+                    session.SaveOrUpdate(player);
+                    tr.Commit();
+                }
+                catch (Exception)
+                {
+                    tr.Rollback();
+                    throw;
+                }
+            }
         }
 
         public IEnumerable<Player> GetAll()
         {
-            Player p1 = new Player() { PlayerID = 12, Name = "Test Player 1" };
-            Player p2 = new Player() { PlayerID = 1689, Name = "Test Player 2" };
-            return new List<Player> { p1, p2 };
+            var query = session.QueryOver<Player>();
+            return query.List();
         }
     }
 }

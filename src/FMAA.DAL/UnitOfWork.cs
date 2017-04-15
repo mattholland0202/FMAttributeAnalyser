@@ -40,10 +40,10 @@ namespace FMAA.DAL
         private void NHibernateSetup()
         {
             var sessionFactory = Fluently.Configure()
-                                    .Database(SQLiteConfiguration.Standard.UsingFile("FMAA.db"))
-                                    .Mappings(m => m.FluentMappings.AddFromAssemblyOf<PlayerMap>())
-                                    .ExposeConfiguration(BuildSchema)
-                                    .BuildSessionFactory();
+                                         .Database(SQLiteConfiguration.Standard.UsingFile("FMAA.db"))
+                                         .Mappings(m => m.FluentMappings.AddFromAssemblyOf<PlayerMap>())
+                                         .ExposeConfiguration(BuildSchema)
+                                         .BuildSessionFactory();
 
             session = sessionFactory.OpenSession();
         }
